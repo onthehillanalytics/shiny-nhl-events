@@ -116,7 +116,8 @@ ui <- fluidPage(
       #                         "OT"
       #                         ),
       #             selected = " ")
-      tags$footer(HTML("On The Hill Analytics <br>
+      tags$footer(HTML("Disclaimer: All data unofficial <br>
+                       On The Hill Analytics <br>
                        All Rights Reserved <br>
                        Hockey Analytics by Hockey People
                        jordan@onthehillanalytics.com"))
