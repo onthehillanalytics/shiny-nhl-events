@@ -32,6 +32,9 @@ con <- DBI::dbConnect(RPostgres::Postgres(),
 # we are going to have to load this before the app starts
 df_raw <- DBI::dbGetQuery(con, "SELECT * FROM game_events")
 
+# rename tampa bay
+df_raw[df_raw$Ev_Team == "T.B", "Ev_Team"] <- "TBL"
+
 # fix coordinates to be on one side of the rink
 df <- df_raw %>%
   mutate(
