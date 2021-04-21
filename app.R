@@ -49,8 +49,9 @@ df <- df_raw %>%
 
 ui <- fluidPage(
   theme = shinytheme("lumen"),
-  titlePanel(HTML("shiny-nhl-events v0.1 <br>
-                  2021 NHL season"), windowTitle='shiny-nhl-events v0.1'),
+  titlePanel(HTML("shiny-nhl-events v0.1 <br> 2021 NHL season"),
+    windowTitle = "shiny-nhl-events v0.1"
+  ),
   sidebarLayout(
     position = "right",
     sidebarPanel(
@@ -118,11 +119,14 @@ ui <- fluidPage(
       #                         3,
       #                         "OT"
       #                         ),
-      #             selected = " ")
-      tags$footer(HTML("Disclaimer: All data unofficial <br>
-                       On The Hill Analytics <br>
-                       All Rights Reserved <br>
-                       jordan@onthehillanalytics.com"))
+      #             selected = " "),
+      tags$footer(
+        div(
+          img(src = "logo.png", height = 150, width = 150)
+        ),
+        HTML("Disclaimer: All data unofficial <br> All rights reserved <br>"),
+        a(href = "https://github.com/onthehillanalytics", HTML("GitHub"))
+      )
     ),
     mainPanel(plotlyOutput("main")),
   )
