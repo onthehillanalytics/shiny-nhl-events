@@ -50,7 +50,7 @@ df <- df_raw %>%
 ui <- fluidPage(
   theme = shinytheme("lumen"),
   titlePanel(HTML("shiny-nhl-events v0.1 <br>
-                  2021 NHL season")),
+                  2021 NHL season"), windowTitle='shiny-nhl-events v0.1'),
   sidebarLayout(
     position = "right",
     sidebarPanel(
