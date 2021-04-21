@@ -125,7 +125,7 @@ ui <- fluidPage(
           img(src = "logo.png", height = 150, width = 150)
         ),
         HTML("Disclaimer: All data unofficial <br> All rights reserved <br>"),
-        a(href = "https://github.com/onthehillanalytics", HTML("GitHub"))
+        a(href = "https://github.com/onthehillanalytics", HTML("GitHub"), target = "_blank")
       )
     ),
     mainPanel(plotlyOutput("main")),
